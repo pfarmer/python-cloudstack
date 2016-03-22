@@ -1,0 +1,9 @@
+-   repo: git://github.com/pre-commit/pre-commit-hooks
+    sha: 97b88d9
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: flake8
+        args: [--max-line-length=120]
+    -   id: double-quote-string-fixer
+    -   id: fix-encoding-pragma
