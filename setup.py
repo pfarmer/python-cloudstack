@@ -8,4 +8,5 @@ setup(name='cloudstack',
       description='A basic cloudstack API library',
       author='Peter Farmer',
       author_email='pfarmer@gmail.com',
+      packages=['cloudstack']
       )
