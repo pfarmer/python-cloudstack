@@ -8,9 +8,9 @@ urllib3.disable_warnings()
 
 
 cs = CloudStack(
-    api_url=os.environ["API_URL"],
-    secret=os.environ["API_SECRET"],
-    apiKey=os.environ["API_KEY"]
+    api_url=os.environ['API_URL'],
+    secret=os.environ['API_SECRET'],
+    apiKey=os.environ['API_KEY']
 )
 
 

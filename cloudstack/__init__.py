@@ -40,8 +40,8 @@ class SignedAPICall(object):
     def _create_signature(self):
         self.query = '&'.join(self.params)
         digest = hmac.new(
-            str.encode(self.secret, encoding="utf-8"),
-            msg=str.encode(self.query.lower(), encoding="utf-8"),
+            str.encode(self.secret, encoding='utf-8'),
+            msg=str.encode(self.query.lower(), encoding='utf-8'),
             digestmod=hashlib.sha1).digest()
 
         self.signature = base64.b64encode(digest)
