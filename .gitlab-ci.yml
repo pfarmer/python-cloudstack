@@ -1,9 +1,3 @@
 test:
   script:
-  - virtualenv venv
-  - source venv/bin/activate
-  - pip install -r requirements.txt
-  - python -m unittest tests
-  - deactivate
   - tox
-  - coverage run tests
