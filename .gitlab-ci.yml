@@ -6,3 +6,4 @@ test:
   - python -m unittest tests
   - deactivate
   - tox
+  - coverage run tests
