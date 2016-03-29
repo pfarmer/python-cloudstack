@@ -3,6 +3,7 @@ import unittest
 import os
 
 from cloudstack import CloudStack
+from cloudstack.utils import listvms
 from requests.packages import urllib3
 urllib3.disable_warnings()
 
@@ -30,6 +31,12 @@ class CloudStackAPIMethods(unittest.TestCase):
     def test_listNetworks(self):
         resp = cs.listNetworks({})
         self.assertEqual(200, resp.status_code)
+
+
+class CloudStackUtilsMethods(unittest.TestCase):
+    def test_listvms(self):
+        resp = listvms(cs)
+        self.assertEqual(True, isinstance(resp, list))
 
 
 if __name__ == '__main__':
