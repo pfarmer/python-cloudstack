@@ -2,4 +2,7 @@ image: python:2.7-alpine
 
 test:
   script:
-  - tox
+  - pip install requests
+  - pip install coverage
+  - coverage run --source=cloudstack tests.py
+  - coverage report
